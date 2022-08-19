@@ -25,7 +25,7 @@ export const RhfTextArea = <T extends FieldValues>(
 
   return (
     <MuiTextArea
-      ref={ref}
+      inputRef={ref}
       {...rest}
       error={
         errors[name] &&

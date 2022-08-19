@@ -6,6 +6,7 @@ import {
 import styled from "styled-components";
 
 export type MuiTextAreaProps = TextareaAutosizeProps & {
+  inputRef?: TextareaAutosizeProps["ref"];
   error?: string;
 };
 
@@ -13,11 +14,14 @@ const StyledTextArea = styled(TextareaAutosize)`
   background-color: white;
 `;
 
-export const MuiTextArea: React.FC<MuiTextAreaProps> = ({ ...props }) => {
+export const MuiTextArea: React.FC<MuiTextAreaProps> = ({
+  inputRef,
+  ...rest
+}) => {
   return (
     <>
-      <StyledTextArea {...props} />
-      {!!props.error && <FormHelperText error>{props.error}</FormHelperText>}
+      <StyledTextArea ref={inputRef} {...rest} />
+      {!!rest.error && <FormHelperText error>{rest.error}</FormHelperText>}
     </>
   );
 };
