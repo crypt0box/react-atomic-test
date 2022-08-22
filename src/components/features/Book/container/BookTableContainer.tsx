@@ -1,4 +1,4 @@
-import { BookTablePresenter } from "src/components/features/Book/presenter/BookTableContainer";
+import { BookTablePresenter } from "src/components/features/book/presenter/BookTableContainer";
 
 export const BookTableContainer = () => {
   return <BookTablePresenter />;

@@ -1,3 +1,3 @@
-import { BOOK } from "src/components/features/Book/constant.book";
+import { BOOK } from "src/components/features/book/constant.book";
 
 export type Book = typeof BOOK;

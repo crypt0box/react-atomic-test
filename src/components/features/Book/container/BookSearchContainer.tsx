@@ -1,4 +1,4 @@
-import { BookSearchPresenter } from "src/components/features/Book/presenter/BookSearchPresenter";
+import { BookSearchPresenter } from "src/components/features/book/presenter/BookSearchPresenter";
 
 export const BookSearchContainer = () => {
   return <BookSearchPresenter />;
