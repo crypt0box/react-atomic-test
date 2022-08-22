@@ -8,7 +8,7 @@ import {
 import {
   MuiTextArea,
   MuiTextAreaProps,
-} from "src/components/atoms/textarea/TextArea";
+} from "src/components/atoms/TextArea/TextArea";
 
 export type RhfTextAreaProps<T extends FieldValues> = MuiTextAreaProps &
   UseControllerProps<T>;
