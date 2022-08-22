@@ -28,9 +28,9 @@ atoms と molecules は ui ディレクトリに統一していいかも
 ### CSS
 
 - Color などの CSS 変数は以下に定義する
-  - src\styles\variables.scss
+  - src/styles/variables.scss
 - 背景色等全ページ共通の CSS は以下に定義する
-  - src\styles\index.scss
+  - src/styles/index.scss
 
 ## 依存ルール
 
