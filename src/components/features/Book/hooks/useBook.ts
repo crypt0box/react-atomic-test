@@ -1,4 +1,4 @@
-import { Book } from "src/features/Book/type.book";
+import { Book } from "src/components/features/Book/type.book";
 
 export const useBook = () => {
   const book: Book = {

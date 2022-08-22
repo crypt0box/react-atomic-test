@@ -1,9 +1,9 @@
 import { FieldValues } from "react-hook-form";
-import { MuiButton } from "src/components/atoms/Button/Button";
+import { MuiButton } from "src/components/atoms/button/Button";
 import {
   RhfTextArea,
   RhfTextAreaProps,
-} from "src/components/atoms/TextArea/RhfTextArea";
+} from "src/components/atoms/textArea/RhfTextArea";
 
 export const SubmitForm = <T extends FieldValues>(
   props: RhfTextAreaProps<T>

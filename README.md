@@ -5,15 +5,16 @@
 
 ## ディレクトリ構成
 
-atoms と molecules は ui ディレクトリに統一していいかも
+- atoms と molecules -> Presentar
+- features -> Container
+  atoms と molecules は ui ディレクトリに統一していいかも
 
 ## Rules
 
 ### ディレクトリ名
 
-- atoms/molecules/features 以下はパスカルケース（hooks は例外）
+- キャメルケース
   - why: コンポーネント名がパスカルケースなのでそれに合わせたいから
--
 
 ### ファイル名
 

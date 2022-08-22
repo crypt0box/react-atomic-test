@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { MuiButton } from "src/components/atoms/Button/Button";
-import { Flex } from "src/components/atoms/Flex/Flex";
+import { MuiButton } from "src/components/atoms/button/Button";
+import { Flex } from "src/components/atoms/flex/Flex";
 import { useForm } from "react-hook-form";
-import { SubmitForm } from "src/components/molecules/SubmitForm/SubmitForm";
+import { SubmitForm } from "src/components/molecules/submitForm/SubmitForm";
 import { useEffect } from "react";
 
 type Form = {

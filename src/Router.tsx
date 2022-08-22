@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Book } from "src/pages/Book";
-import { Home } from "src/pages/Home";
+import { Book } from "src/components/pages/Book";
+import { Home } from "src/components/pages/Home";
 
 export const Router: React.FC = () => {
   return (
