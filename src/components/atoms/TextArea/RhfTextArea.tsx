@@ -5,7 +5,10 @@ import {
   useController,
   UseControllerProps,
 } from "react-hook-form";
-import { MuiTextArea, MuiTextAreaProps } from "./TextArea";
+import {
+  MuiTextArea,
+  MuiTextAreaProps,
+} from "src/components/atoms/textarea/TextArea";
 
 export type RhfTextAreaProps<T extends FieldValues> = MuiTextAreaProps &
   UseControllerProps<T>;

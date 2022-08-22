@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { MuiButton } from "src/components/atoms/Button/Button";
-import { Flex } from "src/components/atoms/Flex/Flex";
+import { MuiButton } from "src/components/atoms/button/Button";
+import { Flex } from "src/components/atoms/flex/Flex";
 import { useForm } from "react-hook-form";
 import { SubmitForm } from "src/components/molecules/SubmitForm/SubmitForm";
-import { MuiTextArea } from "src/components/atoms/TextArea/TextArea";
-import { RhfTextArea } from "src/components/atoms/TextArea/RhfTextArea";
+import { MuiTextArea } from "src/components/atoms/textarea/TextArea";
+import { RhfTextArea } from "src/components/atoms/textarea/RhfTextArea";
 import { useEffect } from "react";
 
 type Form = {
