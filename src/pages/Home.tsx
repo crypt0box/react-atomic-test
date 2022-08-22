@@ -3,8 +3,6 @@ import { MuiButton } from "src/components/atoms/Button/Button";
 import { Flex } from "src/components/atoms/Flex/Flex";
 import { useForm } from "react-hook-form";
 import { SubmitForm } from "src/components/molecules/SubmitForm/SubmitForm";
-import { MuiTextArea } from "src/components/atoms/TextArea/TextArea";
-import { RhfTextArea } from "src/components/atoms/TextArea/RhfTextArea";
 import { useEffect } from "react";
 
 type Form = {

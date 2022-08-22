@@ -11,12 +11,17 @@ atoms と molecules は ui ディレクトリに統一していいかも
 
 ### ディレクトリ名
 
-- atoms/molecules/features 以下はパスカルケース
+- atoms/molecules/features 以下はパスカルケース（hooks は例外）
+  - why: コンポーネント名がパスカルケースなのでそれに合わせたいから
+-
 
 ### ファイル名
 
 - コンポーネントはパスカルケース
+  - why: https://github.com/airbnb/javascript/tree/master/react#naming
 - それ以外のファイルはキャメルケース
+
+## 依存ルール
 
 ## 参考
 
