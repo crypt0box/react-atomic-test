@@ -25,14 +25,18 @@ atoms と molecules は ui ディレクトリに統一していいかも
 - コンポーネントはパスカルケース
 - それ以外のファイルはキャメルケース
 
-### CSS 変数
+### CSS
 
 - Color などの CSS 変数は以下に定義する
   - src\styles\variables.scss
+- 背景色等全ページ共通の CSS は以下に定義する
+  - src\styles\index.scss
 
 ## 依存ルール
 
+<img src="./reliance.png" width="300">
+
 ## 参考
 
-[SPA Component の推しディレクトリ構成について語る](https://zenn.dev/yoshiko/articles/99f8047555f700)
-[SPA Component の推しディレクトリ構成について語る(Github)](https://github.com/yoshiko-pg/next-template)
+- [SPA Component の推しディレクトリ構成について語る](https://zenn.dev/yoshiko/articles/99f8047555f700)
+- [SPA Component の推しディレクトリ構成について語る(Github)](https://github.com/yoshiko-pg/next-template)
