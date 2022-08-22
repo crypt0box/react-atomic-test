@@ -5,22 +5,30 @@
 
 ## ディレクトリ構成
 
-- atoms と molecules -> Presentar
-- features -> Container
-  atoms と molecules は ui ディレクトリに統一していいかも
+atoms と molecules は ui ディレクトリに統一していいかも
 
-## Rules
+## ルール
+
+### 型定義する場所
+
+- 基本ファイル内に書いて良い
+- 2 回以上別のファイルから呼び出す場合は以下のどちらかに記述する
+  - src/common/type.common.ts
+  - src/components/features/[domain]/type.[domain].ts
 
 ### ディレクトリ名
 
 - キャメルケース
-  - why: コンポーネント名がパスカルケースなのでそれに合わせたいから
 
 ### ファイル名
 
 - コンポーネントはパスカルケース
-  - why: https://github.com/airbnb/javascript/tree/master/react#naming
 - それ以外のファイルはキャメルケース
+
+### CSS 変数
+
+- Color などの CSS 変数は以下に定義する
+  - src\styles\variables.scss
 
 ## 依存ルール
 
