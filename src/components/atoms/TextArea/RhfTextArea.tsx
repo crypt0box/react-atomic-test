@@ -2,7 +2,6 @@ import {
   DeepMap,
   FieldError,
   FieldValues,
-  RefCallBack,
   useController,
   UseControllerProps,
 } from "react-hook-form";
@@ -13,6 +12,7 @@ export type RhfTextAreaProps<T extends FieldValues> = MuiTextAreaProps &
 
 /**
  * react-hook-formラッパー
+ * 参考: https://zenn.dev/manalink/articles/manalink-react-hook-form-v7
  */
 export const RhfTextArea = <T extends FieldValues>(
   props: RhfTextAreaProps<T>

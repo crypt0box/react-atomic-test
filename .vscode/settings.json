@@ -1,0 +1,7 @@
+{
+  "typescript.preferences.importModuleSpecifier": "non-relative", // 絶対パスでauto impportするように指定
+  "editor.formatOnSave": true, // ファイル保存時の自動フォーマット
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true // ファイル保存時に ESLint でフォーマット
+  }
+}

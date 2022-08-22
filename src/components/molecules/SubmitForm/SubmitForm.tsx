@@ -1,4 +1,4 @@
-import { Control, FieldValues } from "react-hook-form";
+import { FieldValues } from "react-hook-form";
 import { MuiButton } from "src/components/atoms/Button/Button";
 import {
   RhfTextArea,
