@@ -8,13 +8,11 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { RhfTextField } from "src/components/atoms/textFiled/RhfTextField";
 import { Button } from "@mui/material";
-
-const StyledButton = styled(MuiButton)`
-  background-color: var(--color-main);
-`;
+import { RhfDatePicker } from "src/components/atoms/datePicker/RhfDatePicker";
 
 const schema = z.object({
   comment: z.string().min(1, { message: "Required" }),
+  date: z.string(),
 });
 
 type Form = z.infer<typeof schema>;
@@ -23,6 +21,7 @@ export const Home = () => {
   const { control, watch, handleSubmit } = useForm<Form>({
     defaultValues: {
       comment: "",
+      date: "",
     },
     resolver: zodResolver(schema),
   });
@@ -40,6 +39,7 @@ export const Home = () => {
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
         <RhfTextField name="comment" control={control} />
+        <RhfDatePicker name="date" control={control} />
         <Button type="submit">送信</Button>
       </form>
     </>
