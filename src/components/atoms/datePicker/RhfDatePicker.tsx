@@ -18,6 +18,7 @@ export const RhfDatePicker = <T extends FieldValues>(
 ) => {
   const { name, control } = props;
   const {
+    // このonChangeで値の変更をRHFに通知(onSubmitやwatchで値を受け取れるようになる)
     field: { onChange },
   } = useController<T>({ name, control });
   const [dateValue, setDateValue] = useState<Date | null>(null);

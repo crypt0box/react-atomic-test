@@ -17,7 +17,7 @@ const StyledTextField = styled(MuiTextField)`
 export const TextField: React.FC<TextFieldProps> = ({ inputRef, ...rest }) => {
   return (
     <>
-      <StyledTextField ref={inputRef} {...rest} />
+      <StyledTextField ref={inputRef} {...rest} error={!!rest.$errorMessage} />
       {!!rest.$errorMessage && (
         <FormHelperText error>{rest.$errorMessage}</FormHelperText>
       )}
