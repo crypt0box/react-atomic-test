@@ -7,7 +7,7 @@ import styled from "styled-components";
 
 export type TextFieldProps = MuiTextFieldProps & {
   inputRef?: MuiTextFieldProps["ref"];
-  errorMessage?: string;
+  $errorMessage?: string;
 };
 
 const StyledTextField = styled(MuiTextField)`
@@ -18,8 +18,8 @@ export const TextField: React.FC<TextFieldProps> = ({ inputRef, ...rest }) => {
   return (
     <>
       <StyledTextField ref={inputRef} {...rest} />
-      {!!rest.errorMessage && (
-        <FormHelperText error>{rest.errorMessage}</FormHelperText>
+      {!!rest.$errorMessage && (
+        <FormHelperText error>{rest.$errorMessage}</FormHelperText>
       )}
     </>
   );

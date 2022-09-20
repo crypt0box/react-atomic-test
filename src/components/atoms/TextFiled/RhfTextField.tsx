@@ -22,15 +22,11 @@ export const RhfTextField = <T extends FieldValues>(
     formState: { errors },
   } = useController<T>({ name, control });
 
-  const t =
-    errors[name] &&
-    `${(errors[name] as DeepMap<FieldValues, FieldError>).message}`;
-
   return (
     <TextField
       inputRef={ref}
       {...rest}
-      errorMessage={
+      $errorMessage={
         errors[name] &&
         `${(errors[name] as DeepMap<FieldValues, FieldError>).message}`
       }
