@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import { MuiButton } from "src/components/atoms/button/Button";
 import { Flex } from "src/components/atoms/flex/Flex";
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { SubmitForm } from "src/components/molecules/submitForm/SubmitForm";
 import { useEffect } from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { RhfTextField } from "src/components/atoms/textFiled/RhfTextField";
+import { Button } from "@mui/material";
 
 const StyledButton = styled(MuiButton)`
   background-color: var(--color-main);
@@ -19,12 +20,14 @@ const schema = z.object({
 type Form = z.infer<typeof schema>;
 
 export const Home = () => {
-  const { control, watch } = useForm<Form>({
+  const { control, watch, handleSubmit } = useForm<Form>({
     defaultValues: {
       comment: "",
     },
     resolver: zodResolver(schema),
   });
+
+  const onSubmit: SubmitHandler<Form> = (data) => console.log(data);
 
   useEffect(() => {
     const subscription = watch((value, { name, type }) =>
@@ -35,8 +38,10 @@ export const Home = () => {
 
   return (
     <>
-      <h2>Home</h2>
-      <RhfTextField name="comment" control={control} />
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <RhfTextField name="comment" control={control} />
+        <Button type="submit">送信</Button>
+      </form>
     </>
   );
 };
