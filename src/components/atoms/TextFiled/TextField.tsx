@@ -1,7 +1,26 @@
-import { TextField, TextFieldProps } from '@mui/material';
+import {
+  FormHelperText,
+  TextField as MuiTextField,
+  TextFieldProps as MuiTextFieldProps,
+} from "@mui/material";
+import styled from "styled-components";
 
-export type MuiTextFieldProps = TextFieldProps;
+export type TextFieldProps = MuiTextFieldProps & {
+  inputRef?: MuiTextFieldProps["ref"];
+  errorMessage?: string;
+};
 
-export const MuiTextField: React.FC<MuiTextFieldProps> = ({ ...props }) => {
-  return <TextField {...props} />;
+const StyledTextField = styled(MuiTextField)`
+  background-color: white;
+`;
+
+export const TextField: React.FC<TextFieldProps> = ({ inputRef, ...rest }) => {
+  return (
+    <>
+      <StyledTextField ref={inputRef} {...rest} />
+      {!!rest.errorMessage && (
+        <FormHelperText error>{rest.errorMessage}</FormHelperText>
+      )}
+    </>
+  );
 };
