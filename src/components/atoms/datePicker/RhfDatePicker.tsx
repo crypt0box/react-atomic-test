@@ -45,6 +45,10 @@ export const RhfDatePicker = <T extends FieldValues>(
       renderInput={(params) => (
         <RhfTextField
           {...params}
+          inputProps={{
+            ...params.inputProps,
+            placeholder: "日付を選択してください",
+          }}
           onChange={(e) => onChangeText(e.target.value)}
           defaultValue={undefined}
           name={name}
