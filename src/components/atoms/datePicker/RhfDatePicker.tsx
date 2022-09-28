@@ -5,7 +5,6 @@ import {
 } from "react-hook-form";
 import { DatePicker } from "@mui/x-date-pickers";
 import { RhfTextField } from "src/components/atoms/textFiled/RhfTextField";
-import { useState } from "react";
 import { parse } from "date-fns";
 
 /** 日付フォーマットyyyy/MM/ddを文字列とみなした時の長さは10 */
@@ -19,12 +18,10 @@ export const RhfDatePicker = <T extends FieldValues>(
   const { name, control } = props;
   const {
     // このonChangeで値の変更をRHFに通知(onSubmitやwatchで値を受け取れるようになる)
-    field: { onChange },
+    field: { onChange, value },
   } = useController<T>({ name, control });
-  const [dateValue, setDateValue] = useState<Date | null>(null);
 
   const onSelectDate = (e: Date | null) => {
-    setDateValue(e);
     onChange(e);
   };
 
@@ -41,7 +38,7 @@ export const RhfDatePicker = <T extends FieldValues>(
   };
   return (
     <DatePicker
-      value={dateValue}
+      value={value || null}
       onChange={(e: Date | null) => onSelectDate(e)}
       renderInput={(params) => (
         <RhfTextField

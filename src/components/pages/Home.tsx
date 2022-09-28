@@ -19,7 +19,7 @@ const schema = z.object({
 type Form = z.infer<typeof schema>;
 
 export const Home = () => {
-  const { control, watch, handleSubmit } = useForm<Form>({
+  const { control, watch, handleSubmit, reset } = useForm<Form>({
     defaultValues: {
       comment: "",
       date: undefined,
@@ -42,6 +42,13 @@ export const Home = () => {
         <RhfTextField name="comment" control={control} />
         <RhfDatePicker name="date" control={control} />
         <Button type="submit">送信</Button>
+        <Button
+          onClick={() => {
+            reset();
+          }}
+        >
+          リセット
+        </Button>
       </form>
     </>
   );
